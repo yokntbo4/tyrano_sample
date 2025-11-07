@@ -1,46 +1,87 @@
 *start
 
-[title name="走るか寝るかするメロス"]
+[title name="食べたい寿司"]
 [hidemenubutton]
 [wait time=200]
 [freeimage layer="base"]
 
-「走るか寝るかするメロス」[l][r]
+[bg storage=sushi.png time=500]
 
-メロスは激怒した。[l][r]
+「食べたい寿司」[l][r]
 
-必ず、かの邪智暴虐の王を除かねばならぬと決意した。[l][r]
+あなたは友人と一緒に寿司を食べている。[l][r]
 
-(中略)[l][r]
+そしてあなたはイクラ、マグロ、ウニの3種類を狙っている。[l][r]
 
-ああ、何もかも、ばかばかしい。私は、醜い裏切り者だ。どうとも、勝手にするがよい。やんぬる哉。[l][r]
-メロスは...[l][r]
+しかし、誰がどの寿司をとるかは気まぐれである。[l][r]
 
-[link target=*tag_sleep] →寝る [endlink][r]
-[link target=*tag_run] →走る [endlink][r]
+あなたが最初にとるのは・・・[l][r]
+
+[link target=*tag_ikura] →イクラ [endlink][r]
+[link target=*tag_maguro] →マグロ [endlink][r]
+[link target=*tag_uni] →ウニ [endlink][r]
 [s]
 
-*tag_sleep
+*tag_ikura
 
 [cm]
 
-[bg storage=sleep.jpg time=500]
+[bg storage=ikura.png time=500]
 
-メロスは死んだように深く眠った。[l][r]
-勇者は、ひどく赤面した。[r]
+イクラをとれたと思ったら、ほかの人にマグロを取られてしまった。[l][r]
 
-【 BAD END 】[l][cm]
+【 残念 】[l][cm]
 
 [jump target=*start]
 
-*tag_run
-
-[bg storage=run.jpg time=500]
+*tag_maguro
 
 [cm]
-メロスは黒い風のように走った。[l][r]
-陽は、ゆらゆら地平線に没し、まさに最後の一片の残光も、消えようとした時、メロスは疾風の如く刑場に突入した。間に合った。[r]
 
-【 GOOD END 】[l][cm]
+[bg storage=maguro.png time=500]
+
+マグロをとれたと思ったら、ほかの人にウニを取られてしまった。[l][r]
+
+【 残念 】[l][cm]
+
+[jump target=*start]
+
+*tag_uni
+
+[bg storage=uni.png time=500]
+
+[cm]
+ウニをとることができた。[l][r]
+まだイクラとマグロはとられていないようだ。[l][r]
+あなたが次にとるのは・・[l][r]
+
+[link target=*tag_ikura] →イクラ [endlink][r]
+[link target=*tag_maguro2] →マグロ [endlink][r]
+
+[s]
+
+*tag_maguro2
+
+[cm]
+
+[bg storage=maguro.png time=500]
+
+マグロをとることができた。[l][r]
+そしてまだイクラは残っている。[l][r]
+あなたが次にとるのは・・[l][r]
+[link target=*tag_ikura2] →イクラ [endlink][r]
+
+[s]
+
+*tag_ikura2
+
+[cm]
+
+[bg storage=ikura.png time=500]
+
+イクラをとることができた。[l][r]
+無事に狙っていた3種類を食べることができた。[l][r]
+
+【 成功 】[l][cm]
 
 [jump target=*start]
